@@ -5,6 +5,9 @@ def text_analyzer(text = None):
 punctuation and spaces in a given text'''
     if(not text):
         text = input("What is the text to analyze? ")
+    if not isinstance(text, str):
+        print("Error Arugument must be a string")
+        return
     punctuation = 0
     spaces = 0
     upper = 0
