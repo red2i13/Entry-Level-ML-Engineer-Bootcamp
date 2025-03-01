@@ -22,6 +22,10 @@ def ft_progress(lst):
 			print(f"ETA: { remain:>7}s [{int(percent)}%][{bar}] {lst.index(i)+1}/{len(lst)} | elapsed time {cur_time:.2f}s", end='\r', file=sys.stdout, flush=True)
 		yield lst.index(i)
 
-	for index in range(1, len(lst)+1): ...
-	for element in list: ...
-	for index, element in enumerate(list, start=1): ...
+listy = range(1000)
+ret = 0
+for elem in ft_progress(listy):
+	ret += (elem + 3) % 5
+	sleep(0.01)
+print()
+print(ret)
